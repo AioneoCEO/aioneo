@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: Props) {
                   aria-label="Share on Twitter"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#2C2C2C]/15 text-sm text-[#2C2C2C]/60 hover:text-[#2C2C2C] hover:border-[#2C2C2C]/30 transition-all"
                 >
-                  𝕏 Twitter
+                  X / Twitter
                 </a>
                 <a
                   href={`https://facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://aioneo.com/journal/${post.slug}`)}`}
