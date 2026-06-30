@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Search } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function NotFound() {
   return (
@@ -21,7 +21,7 @@ export default function NotFound() {
         {/* Helpful links */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
           {[
-            { label: 'Shop Products', href: '/reclaimed-auto-care', desc: 'Browse our full lineup' },
+            { label: 'Our Services', href: '/reclaimed-auto-care', desc: 'Browse Reclaimed Auto Care' },
             { label: 'The Journal', href: '/journal', desc: 'Detail guides & stories' },
             { label: 'Contact Us', href: '/contact', desc: 'We can help' },
           ].map((link) => (
@@ -46,10 +46,10 @@ export default function NotFound() {
             Go Home <ArrowRight size={16} />
           </Link>
           <Link
-            href="/search"
+            href="/contact"
             className="inline-flex items-center justify-center gap-2 bg-white text-[#2C2C2C] px-8 py-3.5 rounded-lg font-semibold text-sm border border-[#2C2C2C]/15 hover:border-[#2C2C2C]/30 transition-colors"
           >
-            <Search size={16} /> Search the Site
+            Contact Us
           </Link>
         </div>
       </div>

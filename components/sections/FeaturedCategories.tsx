@@ -42,10 +42,10 @@ export default function FeaturedCategories() {
             Reclaimed Auto Care
           </p>
           <h2 id="categories-heading" className="font-serif text-4xl sm:text-5xl text-[#2C2C2C]">
-            Shop by Category
+            Our Services
           </h2>
           <p className="mt-4 text-[#2C2C2C]/60 max-w-xl mx-auto">
-            Every product in the Reclaimed Auto Care line is formulated for a specific purpose. Find what your vehicle needs.
+            Every Reclaimed Auto Care service is tailored to a specific need. Find what your vehicle needs.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function FeaturedCategories() {
               key={cat.href}
               href={cat.href}
               className="group relative rounded-2xl overflow-hidden aspect-[4/5] flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D4A35] focus-visible:ring-offset-2"
-              aria-label={`Shop ${cat.name}`}
+              aria-label={`Learn about ${cat.name}`}
             >
               {/* Gradient background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${cat.gradient} transition-transform duration-700 group-hover:scale-105`} />
@@ -81,7 +81,7 @@ export default function FeaturedCategories() {
                 <h3 className="font-serif text-2xl text-white font-semibold mb-2">{cat.name}</h3>
                 <p className="text-white/65 text-sm leading-relaxed mb-4">{cat.description}</p>
                 <span className="inline-flex items-center gap-2 text-sm font-medium text-white/90 group-hover:gap-3 transition-all">
-                  Shop Now <ArrowRight size={16} />
+                  Learn More <ArrowRight size={16} />
                 </span>
               </div>
             </Link>
@@ -93,7 +93,7 @@ export default function FeaturedCategories() {
             href="/reclaimed-auto-care"
             className="inline-flex items-center gap-2 text-sm font-medium text-[#2D4A35] hover:gap-3 transition-all"
           >
-            View all categories <ArrowRight size={16} />
+            View all services <ArrowRight size={16} />
           </Link>
         </div>
       </div>

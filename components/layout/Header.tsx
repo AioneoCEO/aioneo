@@ -2,29 +2,20 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { Search, User, ShoppingCart, Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
+import { SERVICES } from '@/lib/services'
 
 const NAV_LINKS = [
   { label: 'About', href: '/about' },
+  { label: 'Mission', href: '/mission' },
   {
     label: 'Reclaimed Auto Care',
     href: '/reclaimed-auto-care',
-    dropdown: [
-      { label: 'Interior Care', href: '/reclaimed-auto-care/interior' },
-      { label: 'Exterior Care', href: '/reclaimed-auto-care/exterior' },
-      { label: 'Wash', href: '/reclaimed-auto-care/wash' },
-      { label: 'Ceramic Protection', href: '/reclaimed-auto-care/ceramic' },
-      { label: 'Glass Care', href: '/reclaimed-auto-care/glass' },
-      { label: 'Wheel & Tire Care', href: '/reclaimed-auto-care/wheel-tire' },
-      { label: 'Accessories', href: '/reclaimed-auto-care/accessories' },
-      { label: 'Bundles', href: '/reclaimed-auto-care/bundles' },
-    ],
+    dropdown: SERVICES.map((s) => ({ label: s.name, href: `/reclaimed-auto-care/${s.slug}` })),
   },
   { label: 'Journal', href: '/journal' },
   { label: 'Contact', href: '/contact' },
 ]
-
-const CART_COUNT = 0
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -134,21 +125,13 @@ export default function Header() {
               )}
             </nav>
 
-            {/* Right Icons */}
+            {/* Right Actions */}
             <div className={`flex items-center gap-4 ${textColor}`}>
-              <Link href="/search" aria-label="Search" className="hidden sm:flex hover:opacity-70 transition-opacity">
-                <Search size={20} />
-              </Link>
-              <Link href="/account" aria-label="Account" className="hidden sm:flex hover:opacity-70 transition-opacity">
-                <User size={20} />
-              </Link>
-              <Link href="/cart" aria-label={`Cart${CART_COUNT > 0 ? `, ${CART_COUNT} items` : ', empty'}`} className="relative hover:opacity-70 transition-opacity">
-                <ShoppingCart size={20} />
-                {CART_COUNT > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-[#2D4A35] text-white text-xs w-4.5 h-4.5 rounded-full flex items-center justify-center font-bold leading-none">
-                    {CART_COUNT}
-                  </span>
-                )}
+              <Link
+                href="/contact"
+                className="hidden sm:inline-flex items-center text-sm font-semibold tracking-wide px-5 py-2.5 rounded-lg bg-[#2D4A35] text-white hover:bg-[#243d2b] transition-colors"
+              >
+                Book Now
               </Link>
               <button
                 className="lg:hidden hover:opacity-70 transition-opacity"
@@ -206,22 +189,13 @@ export default function Header() {
                 </Link>
               )
             )}
-            <div className="mt-6 flex gap-4">
-              <Link
-                href="/search"
-                className="flex items-center gap-2 text-sm text-[#2C2C2C]/70"
-                onClick={() => setMobileOpen(false)}
-              >
-                <Search size={18} /> Search
-              </Link>
-              <Link
-                href="/account"
-                className="flex items-center gap-2 text-sm text-[#2C2C2C]/70"
-                onClick={() => setMobileOpen(false)}
-              >
-                <User size={18} /> Account
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex items-center justify-center text-sm font-semibold tracking-wide px-5 py-3 rounded-lg bg-[#2D4A35] text-white"
+              onClick={() => setMobileOpen(false)}
+            >
+              Book Now
+            </Link>
           </nav>
         </div>
       )}

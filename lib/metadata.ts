@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 const BASE_URL = 'https://aioneo.com'
 const SITE_NAME = 'Aioneo'
 const DEFAULT_DESCRIPTION =
-  'Aioneo — Restore What Matters. Premium lifestyle products crafted for those who care about quality. Home of Reclaimed Auto Care.'
+  'Aioneo — Restore What Matters. A healthier system of restoration services, free of microplastics and toxic chemicals. Home of Reclaimed Auto Care.'
 
 interface MetadataOptions {
   title?: string
@@ -31,7 +31,7 @@ export function generateMetadata({
   return {
     title: fullTitle,
     description,
-    keywords: ['Aioneo', 'Reclaimed Auto Care', 'premium auto detailing', 'car care products', ...keywords],
+    keywords: ['Aioneo', 'Reclaimed Auto Care', 'professional auto detailing', 'non-toxic car care', ...keywords],
     authors: [{ name: 'Aioneo' }],
     creator: 'Aioneo',
     publisher: 'Aioneo',

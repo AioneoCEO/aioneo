@@ -1,31 +1,31 @@
-import { Truck, RotateCcw, FlaskConical, Award } from 'lucide-react'
+import { Leaf, ShieldCheck, FlaskConical, Award } from 'lucide-react'
 
 const SIGNALS = [
   {
-    icon: Truck,
-    title: 'Free Shipping $75+',
-    description: 'Complimentary standard shipping on all orders over $75 within the continental US.',
+    icon: Leaf,
+    title: 'Non-Toxic, Always',
+    description: 'Every product we use is biodegradable and free of harsh chemicals and microplastics.',
   },
   {
-    icon: RotateCcw,
-    title: '30-Day Returns',
-    description: 'Not satisfied? Return any product within 30 days for a full refund — no questions asked.',
+    icon: ShieldCheck,
+    title: 'Experienced & Insured',
+    description: 'Professional detailing you can trust, backed by years of hands-on experience.',
   },
   {
     icon: FlaskConical,
-    title: 'Expert Formulated',
-    description: 'Every product is developed by professional chemists and tested by working detailers.',
+    title: 'Clean Process',
+    description: 'Every step of our process is chosen to protect your vehicle, your health, and the environment.',
   },
   {
     icon: Award,
     title: 'Satisfaction Guaranteed',
-    description: 'We stand behind every formula. If it doesn\'t perform as described, we make it right.',
+    description: "We stand behind every detail. If it doesn't meet your expectations, we'll make it right.",
   },
 ]
 
 export default function TrustSignals() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-[#2C2C2C]/8" aria-label="Why shop with us">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-[#2C2C2C]/8" aria-label="Why choose us">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {SIGNALS.map((signal) => {

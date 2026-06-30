@@ -4,28 +4,28 @@ import { Leaf, Microscope, Heart } from 'lucide-react'
 
 export const metadata: Metadata = genMeta({
   title: 'Our Mission',
-  description: 'Aioneo\'s mission: to create products worthy of the things you love. Learn about our three core pillars — quality, transparency, and stewardship.',
+  description: 'Aioneo\'s mission: a healthy system of restoration services, free of microplastics and toxic chemicals. Learn about our three core commitments.',
   path: '/mission',
 })
 
 const PILLARS = [
   {
     icon: Microscope,
-    title: 'Uncompromising Quality',
+    title: 'No Microplastics, No Toxins',
     description:
-      'Every formula starts in our lab and doesn\'t leave until it\'s the best we\'ve ever tested. We partner with independent analytical chemists to verify our claims, and we run real-world field tests with professional detailers before any product reaches a customer. "Good enough" isn\'t in our vocabulary — because you deserve better.',
+      'Every product we use is chosen to be non-toxic, low-VOC, and free of microplastics where possible. We don\'t cut corners on what goes into our process — because what touches your car, your home, and your life shouldn\'t come with a hidden cost to your health.',
   },
   {
     icon: Heart,
-    title: 'Radical Transparency',
+    title: 'Restoration Over Replacement',
     description:
-      'We list our key active ingredients, explain what they do, and tell you honestly what our products won\'t do. We don\'t use meaningless buzzwords. We don\'t inflate performance numbers. We share test data. If we don\'t know something, we say so. You can\'t make informed choices without honest information.',
+      'We believe in restoring what\'s already valuable instead of throwing it away. It starts with your car through Reclaimed Auto Care, and it\'s growing from there — toward a full system of restoration services built on the same standard.',
   },
   {
     icon: Leaf,
-    title: 'Environmental Stewardship',
+    title: 'Clean for the Long Run',
     description:
-      'Premium shouldn\'t come at the planet\'s expense. Our formulas are biodegradable where chemistry allows. Our packaging is minimal and recyclable. We\'re actively exploring concentrated refill formats to cut plastic use. We measure our impact, report it honestly, and work to improve it every year.',
+      'Health shouldn\'t come at the planet\'s expense. We prioritize biodegradable, eco-conscious products throughout our process and are transparent about any exceptions. We measure our impact and work to improve it as we grow.',
   },
 ]
 
@@ -45,10 +45,10 @@ export default function MissionPage() {
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <p className="text-[#C8B89A] text-xs font-semibold tracking-[0.25em] uppercase mb-4">Our Mission</p>
           <h1 id="mission-heading" className="font-serif text-5xl sm:text-6xl text-white mb-6 leading-tight">
-            Products Worthy of the Things You Love
+            A Healthy System of Restoration
           </h1>
           <p className="text-white/70 text-lg leading-relaxed">
-            We exist to make products that meet the standard of the objects they protect — and the people who use them.
+            We exist to help people live clean — restoring what they already own, without worrying about microplastics or toxic chemicals.
           </p>
         </div>
       </section>
@@ -60,10 +60,10 @@ export default function MissionPage() {
             What We&apos;re Here to Do
           </h2>
           <p className="text-xl text-[#2C2C2C]/70 leading-relaxed mb-6">
-            Aioneo&apos;s mission is to create premium lifestyle products that are genuinely worth the trust people place in them — formulated with scientific rigor, described honestly, and designed to last.
+            Aioneo&apos;s mission is to create a healthy system of restoration services so people can live clean — without worrying about microplastics or other toxic chemicals.
           </p>
           <p className="text-[#2C2C2C]/55 leading-relaxed">
-            We believe the gap between &ldquo;premium&rdquo; and &ldquo;performant&rdquo; is artificial. You shouldn&apos;t have to choose between a beautiful product and an effective one. Between caring about quality and caring about the environment. We close that gap — one product at a time.
+            We believe restoring what&apos;s already valuable is better than replacing it. Reclaimed Auto Care is where we started. Over time, we&apos;re building out more restoration services — each one held to the same standard: clean, healthy, and effective.
           </p>
         </div>
       </section>
@@ -97,9 +97,9 @@ export default function MissionPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#2C2C2C]">
         <div className="max-w-3xl mx-auto text-center">
           <blockquote className="font-serif text-3xl sm:text-4xl text-white leading-tight mb-6">
-            &ldquo;We make products for people who believe the things they love deserve to be cared for properly.&rdquo;
+            &ldquo;We believe what you already own deserves to be restored properly — without the trade-off.&rdquo;
           </blockquote>
-          <cite className="not-italic text-white/50 text-sm">David Kessler, Founder of Aioneo</cite>
+          <cite className="not-italic text-white/50 text-sm">Founder, Aioneo</cite>
         </div>
       </section>
     </div>

@@ -15,7 +15,7 @@ interface Props {
 export default function HeroSection({
   headline = 'Restore What Matters',
   subheadline = 'Professional-grade car care products formulated for the enthusiast who refuses to settle. Crafted with precision. Made to perform.',
-  primaryCta = { label: 'Shop Reclaimed Auto Care', href: '/reclaimed-auto-care' },
+  primaryCta = { label: 'Explore Reclaimed Auto Care', href: '/reclaimed-auto-care' },
   secondaryCta = { label: 'Our Story', href: '/about' },
   gradientFrom = '#1a2e1f',
   gradientTo = '#2D4A35',

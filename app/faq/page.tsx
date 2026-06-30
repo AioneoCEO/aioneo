@@ -6,110 +6,57 @@ import { ChevronDown } from 'lucide-react'
 
 const FAQ_SECTIONS = [
   {
-    title: 'Orders & Shipping',
+    title: 'Booking a Service',
     items: [
       {
-        q: 'How long does shipping take?',
-        a: 'Standard orders ship within 1–2 business days. Standard shipping typically arrives in 3–5 business days. Expedited options are available at checkout. Orders placed before 12pm ET on business days often ship the same day.',
+        q: 'How do I book a detailing service?',
+        a: 'Reach out through our contact page with the service you\'re interested in and your vehicle details. We\'ll follow up to confirm a time and location.',
       },
       {
-        q: 'Do you offer free shipping?',
-        a: 'Yes — all orders over $75 within the continental United States qualify for complimentary standard shipping. This threshold is applied after any discounts.',
+        q: 'How far in advance should I book?',
+        a: 'We recommend booking at least a few days ahead, especially for full details or ceramic coating appointments. We\'ll always do our best to accommodate shorter notice.',
       },
       {
-        q: 'Can I change or cancel my order after placing it?',
-        a: 'We process orders quickly, but if you contact us within 2 hours of placing your order at hello@aioneo.com, we\'ll do our best to accommodate changes or cancellations. Once an order has been fulfilled, we cannot make changes.',
+        q: 'Can I reschedule or cancel my appointment?',
+        a: 'Yes — just contact us as soon as you know, and we\'ll find a new time that works for you.',
       },
       {
-        q: 'Do you ship internationally?',
-        a: 'Currently, we ship to the United States and Canada. International expansion is planned for 2026. For Canada orders, shipping rates and delivery times vary by province. Please note that duties and taxes are the responsibility of the recipient.',
-      },
-      {
-        q: 'My order tracking isn\'t updating. What should I do?',
-        a: 'Tracking updates can sometimes lag 24–48 hours after pickup. If your tracking hasn\'t updated after 3 business days, contact us at hello@aioneo.com with your order number and we\'ll investigate.',
-      },
-      {
-        q: 'Can I ship to a PO Box?',
-        a: 'Standard USPS shipments can be delivered to PO Boxes. However, some expedited carriers (FedEx, UPS) cannot deliver to PO Boxes. If you enter a PO Box address, we\'ll automatically select an appropriate carrier.',
+        q: 'How long does a typical service take?',
+        a: 'It depends on the service. A maintenance wash usually takes under an hour, while a full interior and exterior detail or ceramic coating can take several hours. We\'ll give you a time estimate when you book.',
       },
     ],
   },
   {
-    title: 'Returns & Refunds',
+    title: 'Our Products & Process',
     items: [
       {
-        q: 'What is your return policy?',
-        a: 'We offer a 30-day return window from the date of delivery. Products must be in their original condition — unused and in original packaging. If a product didn\'t perform as expected, we want to hear about it even if it\'s been opened.',
+        q: 'Are the products you use safe and non-toxic?',
+        a: 'Yes. Every product we use is chosen to be non-toxic, low-VOC, and free of microplastics where possible — safe for you, your family, and the environment.',
       },
-      {
-        q: 'How do I start a return?',
-        a: 'Email hello@aioneo.com with your order number and the reason for your return. We\'ll provide a prepaid return label and instructions. Refunds are processed within 5 business days of receiving the returned item.',
-      },
-      {
-        q: 'Can I return an opened product?',
-        a: 'Yes — if you tried a product and it didn\'t work for you, we still want to make it right. Contact us and explain the issue. We may ask for photos or more information to help us improve. Customer satisfaction is our first priority.',
-      },
-      {
-        q: 'How long do refunds take?',
-        a: 'Once we receive and inspect your return (typically 1–2 business days), we issue the refund within 5 business days. Your bank or card issuer may take an additional 3–10 business days to post the credit.',
-      },
-      {
-        q: 'What if I received the wrong item or a damaged product?',
-        a: 'We sincerely apologize. Email us photos of the damage or wrong item within 7 days of delivery and we\'ll ship a replacement at no charge — no return required in most cases.',
-      },
-    ],
-  },
-  {
-    title: 'Products & Ingredients',
-    items: [
       {
         q: 'Are your products safe for ceramic-coated vehicles?',
-        a: 'Yes. All Reclaimed Auto Care wash and maintenance products are pH-neutral and safe for use on ceramic-coated vehicles. Our Foam Wash Shampoo is specifically formulated to clean effectively without stripping or degrading ceramic coatings.',
-      },
-      {
-        q: 'Are your products safe for paint protection film (PPF)?',
-        a: 'Our pH-neutral wash products are safe for PPF. For our Ceramic Coating, we recommend consulting with your PPF installer before application over PPF, as compatibility can vary by film brand.',
+        a: 'Yes. Our wash and maintenance products are pH-neutral and safe for use on ceramic-coated vehicles.',
       },
       {
         q: 'Are your formulas biodegradable?',
-        a: 'Our wash products are formulated with biodegradable surfactants. Specialty products (coatings, iron removers) contain compounds that may not be fully biodegradable — we\'re transparent about this and are actively working on reformulations.',
+        a: 'We prioritize biodegradable, eco-conscious products throughout our process and are transparent about any exceptions.',
       },
       {
-        q: 'Do you test on animals?',
-        a: 'No. Aioneo does not conduct or commission animal testing for any of our products or ingredients.',
-      },
-      {
-        q: 'Where are your products manufactured?',
-        a: 'Our products are formulated and manufactured in the United States. We use domestic suppliers for the majority of our raw materials and work with ISO-certified contract manufacturers.',
-      },
-      {
-        q: 'How long do your products last in storage?',
-        a: 'Shelf life varies by product. Most liquid products have a 2–3 year shelf life when stored in a cool, dry environment out of direct sunlight. Ceramic coatings should be used within 12 months of opening. Check individual product labels for specific guidance.',
+        q: 'Do you offer mobile detailing?',
+        a: 'Reach out and let us know your location — we\'ll let you know whether mobile service is available in your area.',
       },
     ],
   },
   {
-    title: 'Account & Subscriptions',
+    title: 'Pricing & Payment',
     items: [
       {
-        q: 'Do I need an account to place an order?',
-        a: 'No — guest checkout is available. However, creating an account gives you access to order history, saved addresses, wishlist, and faster checkout on future purchases.',
+        q: 'How much does a service cost?',
+        a: 'Pricing depends on your vehicle\'s size, condition, and the service selected. Contact us for a quote.',
       },
       {
-        q: 'How do I reset my password?',
-        a: 'On the login page, click "Forgot password" and enter the email address associated with your account. You\'ll receive a password reset link within a few minutes.',
-      },
-      {
-        q: 'Do you offer a subscription or auto-replenishment program?',
-        a: 'A subscribe-and-save program is in development and expected to launch in late 2025. Join our newsletter to be notified when it becomes available.',
-      },
-      {
-        q: 'Is my payment information stored securely?',
-        a: 'We do not store payment card data on our servers. All payment processing is handled by Stripe, which maintains PCI DSS Level 1 compliance — the highest level of payment security certification.',
-      },
-      {
-        q: 'How can I delete my account?',
-        a: 'To request account deletion, email hello@aioneo.com from the email address on your account. We\'ll process your request within 30 days per our Privacy Policy.',
+        q: 'What payment methods do you accept?',
+        a: 'We accept major payment methods at the time of service. We\'ll confirm details when you book.',
       },
     ],
   },
