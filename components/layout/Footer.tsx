@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import NewsletterSignup from '@/components/ui/NewsletterSignup'
+import { SERVICES } from '@/lib/services'
 
 function InstagramIcon({ size = 20 }: { size?: number }) {
   return (
@@ -36,30 +37,17 @@ function PinterestIcon({ size = 20 }: { size?: number }) {
   )
 }
 
-const SHOP_LINKS = [
-  { label: 'Interior Care', href: '/reclaimed-auto-care/interior' },
-  { label: 'Exterior Care', href: '/reclaimed-auto-care/exterior' },
-  { label: 'Wash', href: '/reclaimed-auto-care/wash' },
-  { label: 'Ceramic Protection', href: '/reclaimed-auto-care/ceramic' },
-  { label: 'Glass Care', href: '/reclaimed-auto-care/glass' },
-  { label: 'Wheel & Tire Care', href: '/reclaimed-auto-care/wheel-tire' },
-  { label: 'Accessories', href: '/reclaimed-auto-care/accessories' },
-  { label: 'Bundles', href: '/reclaimed-auto-care/bundles' },
-]
+const SERVICE_LINKS = SERVICES.map((s) => ({ label: s.name, href: `/reclaimed-auto-care/${s.slug}` }))
 
 const COMPANY_LINKS = [
   { label: 'About Aioneo', href: '/about' },
   { label: 'Our Mission', href: '/mission' },
   { label: 'Journal', href: '/journal' },
-  { label: 'Careers', href: '/careers' },
-  { label: 'Press', href: '/press' },
 ]
 
 const SUPPORT_LINKS = [
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact Us', href: '/contact' },
-  { label: 'Shipping Policy', href: '/shipping-policy' },
-  { label: 'Returns', href: '/returns' },
   { label: 'Accessibility', href: '/accessibility' },
 ]
 
@@ -72,7 +60,7 @@ export default function Footer() {
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="font-serif text-2xl text-white mb-2">Stay in the Loop</h2>
             <p className="text-white/60 mb-6 text-sm">
-              New products, detail guides, and exclusive offers — delivered to your inbox. Unsubscribe any time.
+              Detailing guides, service updates, and tips for cleaner, healthier living — delivered to your inbox. Unsubscribe any time.
             </p>
             <NewsletterSignup dark />
           </div>
@@ -88,7 +76,7 @@ export default function Footer() {
               Aioneo
             </Link>
             <p className="mt-4 text-sm text-white/55 leading-relaxed">
-              We create products for people who believe in restoring what already matters — their cars, their homes, their lives. Premium. Purposeful. Real.
+              We&apos;re building a healthier way to live and restore — clean, non-toxic services and products, free of microplastics and harsh chemicals.
             </p>
             <div className="mt-6 flex gap-4">
               <a
@@ -130,11 +118,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Shop */}
+          {/* Col 2: Services */}
           <div>
-            <h3 className="text-white font-semibold text-sm tracking-widest uppercase mb-5">Shop</h3>
+            <h3 className="text-white font-semibold text-sm tracking-widest uppercase mb-5">Services</h3>
             <ul className="space-y-3">
-              {SHOP_LINKS.map((link) => (
+              {SERVICE_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-white/55 hover:text-white transition-colors">
                     {link.label}
@@ -178,7 +166,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            © 2025 Aioneo. All rights reserved. Reclaimed Auto Care is a division of Aioneo.
+            © 2026 Aioneo. All rights reserved. Reclaimed Auto Care is a service of Aioneo.
           </p>
           <nav className="flex gap-6" aria-label="Legal navigation">
             {[

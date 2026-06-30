@@ -15,13 +15,13 @@ export default function BrandStory() {
           </h2>
           <div className="space-y-4 text-[#2C2C2C]/70 leading-relaxed">
             <p>
-              Aioneo was born from a belief that the products people use every day should be as thoughtfully crafted as the things they protect. Our founder spent fifteen years in product formulation before a single poorly-made car care product pushed him too far.
+              Aioneo was born from a simple idea: the services people rely on every day shouldn&apos;t come at the cost of their health or the environment. Too many car care routines depend on harsh chemicals and microplastics — we wanted a cleaner way.
             </p>
             <p>
-              Reclaimed Auto Care, our debut product line, took eighteen months of development. Every formula was lab-validated, tested by working detailers, and refined through real-world feedback before it carried our name. We don&apos;t rush products to market — we make sure they work first.
+              Reclaimed Auto Care, our first service, brings professional detailing using non-toxic, biodegradable products from start to finish. We don&apos;t cut corners on what goes into the process — we make sure it&apos;s clean first.
             </p>
             <p>
-              The name <em>Reclaimed</em> reflects our philosophy: restore what&apos;s already valuable. The car you have, the home you&apos;ve built, the life you&apos;re living. We make the products to help you care for it all.
+              The name <em>Reclaimed</em> reflects our philosophy: restore what&apos;s already valuable. The car you have, the home you&apos;ve built, the life you&apos;re living. We&apos;re building the services to help you care for it all.
             </p>
           </div>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -59,7 +59,7 @@ export default function BrandStory() {
                 <p className="text-white/90 text-sm font-medium leading-snug">
                   &ldquo;Premium should mean something — not just a price tag.&rdquo;
                 </p>
-                <p className="text-white/50 text-xs mt-2">David Kessler, Founder</p>
+                <p className="text-white/50 text-xs mt-2">Founder, Aioneo</p>
               </div>
             </div>
           </div>

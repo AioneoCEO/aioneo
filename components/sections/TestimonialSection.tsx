@@ -95,7 +95,7 @@ export default function TestimonialSection() {
             href="/reclaimed-auto-care"
             className="inline-flex items-center gap-2 text-sm font-medium text-[#C8B89A] hover:text-white transition-colors"
           >
-            Shop the products they love →
+            See the services they love →
           </a>
         </div>
       </div>

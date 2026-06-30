@@ -12,13 +12,7 @@ export default function AnnouncementBar() {
     <div className="bg-[#2D4A35] text-white text-sm py-2.5 px-4 relative" role="banner">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-white/95 tracking-wide">
-          <span className="font-medium">Free shipping</span> on orders over $75
-          <span className="mx-3 opacity-50">·</span>
-          Use code{' '}
-          <span className="font-semibold bg-white/15 px-1.5 py-0.5 rounded text-xs tracking-widest">
-            RESTORE15
-          </span>{' '}
-          for 15% off your first order
+          <span className="font-medium">Reclaimed Auto Care</span> — non-toxic, professional detailing services
         </p>
       </div>
       <button

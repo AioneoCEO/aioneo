@@ -32,7 +32,7 @@ export default function CookiePolicyPage() {
               title: 'Types of Cookies We Use',
               body: '',
               list: [
-                { name: 'Strictly Necessary Cookies', desc: 'Essential for the website to function. These include cookies that manage shopping cart contents, maintain your session, and enable secure logins. These cannot be disabled.' },
+                { name: 'Strictly Necessary Cookies', desc: 'Essential for the website to function. These include cookies that maintain your session and enable secure logins. These cannot be disabled.' },
                 { name: 'Performance & Analytics Cookies', desc: 'These cookies collect anonymized information about how visitors use our site — pages visited, time on site, and error messages. We use Google Analytics for this purpose. You can opt out via your browser settings.' },
                 { name: 'Functional Cookies', desc: 'These allow our website to remember your preferences (such as language or region) to provide a more personalized experience.' },
                 { name: 'Marketing & Targeting Cookies', desc: 'Used by us and third parties (Meta/Facebook, Google) to deliver advertisements relevant to your interests. These cookies track your activity across websites. You can opt out via your browser or the platforms themselves.' },

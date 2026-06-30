@@ -2,30 +2,25 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { generateMetadata as genMeta } from '@/lib/metadata'
-import { CATEGORIES, PRODUCTS } from '@/lib/products'
-import ProductCard from '@/components/sections/ProductCard'
+import { SERVICES } from '@/lib/services'
 import TrustSignals from '@/components/sections/TrustSignals'
 
 export const metadata: Metadata = genMeta({
-  title: 'Reclaimed Auto Care — Premium Automotive Detailing Products',
+  title: 'Reclaimed Auto Care — Professional Car Detailing Services',
   description:
-    'Shop Reclaimed Auto Care. Professional-grade car wash, ceramic coatings, interior care, glass treatment, and more. Formulated for enthusiasts.',
+    'Reclaimed Auto Care, an Aioneo service. Professional, non-toxic car detailing — interior, exterior, ceramic coating, and more. Book your detail today.',
   path: '/reclaimed-auto-care',
-  keywords: ['auto detailing', 'car care', 'ceramic coating', 'car wash products'],
+  keywords: ['auto detailing', 'car detailing service', 'ceramic coating', 'mobile detailing'],
 })
 
-const CATEGORY_GRADIENTS: Record<string, string> = {
+const SERVICE_GRADIENTS: Record<string, string> = {
   interior: 'from-[#2D4A35] to-[#4a7a55]',
   exterior: 'from-[#3a3a3a] to-[#5a5a5a]',
   wash: 'from-[#1a4a6a] to-[#3a7a9a]',
   ceramic: 'from-[#6a4a10] to-[#a07a20]',
   glass: 'from-[#2a4a6a] to-[#4a7aaa]',
   'wheel-tire': 'from-[#2a2a2a] to-[#5a5a5a]',
-  accessories: 'from-[#4a3a25] to-[#7a6a45]',
-  bundles: 'from-[#2D4A35] to-[#8B6914]',
 }
-
-const featuredProducts = PRODUCTS.filter((p) => p.isBestSeller || p.isNew).slice(0, 4)
 
 export default function ReclaimedAutoCarePage() {
   return (
@@ -37,77 +32,55 @@ export default function ReclaimedAutoCarePage() {
         aria-labelledby="rac-heading"
       >
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-[#C8B89A] text-xs font-semibold tracking-[0.25em] uppercase mb-4">Aioneo Division</p>
+          <p className="text-[#C8B89A] text-xs font-semibold tracking-[0.25em] uppercase mb-4">An Aioneo Service</p>
           <h1 id="rac-heading" className="font-serif text-5xl sm:text-6xl text-white mb-5">
             Reclaimed Auto Care
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Professional-grade automotive detailing products, formulated from first principles by chemists who care. From weekly wash to long-term ceramic protection — we have everything your vehicle needs.
+            Professional car detailing, done right — and done clean. Non-toxic, low-VOC, biodegradable products on every job, from a weekly wash to full ceramic protection.
           </p>
           <Link
-            href="/shop"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-white text-[#2C2C2C] px-8 py-4 rounded-lg font-semibold hover:bg-[#F7F5F0] transition-colors"
           >
-            Shop All Products <ArrowRight size={18} />
+            Book a Service <ArrowRight size={18} />
           </Link>
         </div>
       </section>
 
       <TrustSignals />
 
-      {/* Categories */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#F7F5F0]" aria-labelledby="rac-categories-heading">
+      {/* Services */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#F7F5F0]" aria-labelledby="rac-services-heading">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <h2 id="rac-categories-heading" className="font-serif text-4xl sm:text-5xl text-[#2C2C2C]">
-              Shop by Category
+            <h2 id="rac-services-heading" className="font-serif text-4xl sm:text-5xl text-[#2C2C2C]">
+              Our Services
             </h2>
             <p className="mt-4 text-[#2C2C2C]/60 max-w-xl mx-auto">
-              Eight purpose-built product categories — each engineered for a specific job on your vehicle.
+              Six purpose-built detailing services — each tailored to a specific need for your vehicle.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {CATEGORIES.map((cat) => {
-              const gradient = CATEGORY_GRADIENTS[cat.slug] || 'from-[#2C2C2C] to-[#4a4a4a]'
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {SERVICES.map((service) => {
+              const gradient = SERVICE_GRADIENTS[service.slug] || 'from-[#2C2C2C] to-[#4a4a4a]'
               return (
                 <Link
-                  key={cat.slug}
-                  href={`/reclaimed-auto-care/${cat.slug}`}
+                  key={service.slug}
+                  href={`/reclaimed-auto-care/${service.slug}`}
                   className="group relative rounded-xl overflow-hidden aspect-square flex flex-col justify-end focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D4A35]"
-                  aria-label={`Shop ${cat.name}`}
+                  aria-label={`Learn about ${service.name}`}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradient} group-hover:scale-105 transition-transform duration-500`} />
                   <div className="relative z-10 p-4">
-                    <h3 className="text-white font-semibold text-sm leading-snug mb-1">{cat.name}</h3>
+                    <h3 className="text-white font-semibold text-sm leading-snug mb-1">{service.name}</h3>
                     <span className="text-white/60 text-xs flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Shop <ArrowRight size={10} />
+                      Learn more <ArrowRight size={10} />
                     </span>
                   </div>
                 </Link>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="rac-featured-heading">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4">
-            <div>
-              <h2 id="rac-featured-heading" className="font-serif text-4xl text-[#2C2C2C]">
-                Fan Favorites
-              </h2>
-              <p className="mt-2 text-[#2C2C2C]/60">Our most-loved products, backed by thousands of reviews.</p>
-            </div>
-            <Link href="/shop" className="text-sm font-medium text-[#2D4A35] hover:underline whitespace-nowrap">
-              View all products →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
           </div>
         </div>
       </section>
@@ -121,7 +94,7 @@ export default function ReclaimedAutoCarePage() {
               Not Sure Where to Start?
             </h2>
             <p className="text-white/65 leading-relaxed">
-              Our free detail guides cover everything from the basics of the two-bucket wash method to applying a ceramic coating for the first time. Written by chemists and working detailers.
+              Our free guides cover everything from the basics of the two-bucket wash method to what ceramic coating actually protects against. Written by working detailers.
             </p>
           </div>
           <div className="flex flex-col gap-3">
@@ -129,8 +102,8 @@ export default function ReclaimedAutoCarePage() {
               href="/journal/how-to-apply-ceramic-coating-at-home"
               className="bg-white/10 border border-white/20 rounded-xl p-5 hover:bg-white/15 transition-colors"
             >
-              <p className="text-[#C8B89A] text-xs font-medium mb-1">Product Education</p>
-              <p className="text-white font-medium text-sm">How to Apply Ceramic Coating at Home</p>
+              <p className="text-[#C8B89A] text-xs font-medium mb-1">Detailing Guide</p>
+              <p className="text-white font-medium text-sm">How Ceramic Coating Protects Your Paint</p>
             </Link>
             <Link
               href="/journal/the-two-bucket-wash-method-explained"

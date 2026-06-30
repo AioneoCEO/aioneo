@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
           <div className="space-y-10 text-[#2C2C2C]/70 text-sm leading-relaxed">
             <section aria-labelledby="privacy-intro">
               <p className="text-base">
-                Aioneo (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at aioneo.com or make a purchase.
+                Aioneo (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at aioneo.com or book a service with us.
               </p>
             </section>
 
@@ -32,12 +32,12 @@ export default function PrivacyPolicyPage() {
               {
                 id: 'collect',
                 title: '1. Information We Collect',
-                body: `We collect information you provide directly to us, including: name, email address, shipping and billing address, phone number, and payment information when you make a purchase. We also collect information automatically when you visit our site, such as IP address, browser type, operating system, referring URLs, pages viewed, and time spent on pages. This information is collected through cookies and similar tracking technologies.`,
+                body: `We collect information you provide directly to us, including: name, email address, phone number, vehicle details, and payment information when you book a service with us. We also collect information automatically when you visit our site, such as IP address, browser type, operating system, referring URLs, pages viewed, and time spent on pages. This information is collected through cookies and similar tracking technologies.`,
               },
               {
                 id: 'use',
                 title: '2. How We Use Your Information',
-                body: `We use the information we collect to: process and fulfill orders; communicate with you about your orders, products, and services; send promotional communications (if you have opted in); improve our website and product offerings; analyze usage patterns and trends; prevent fraud and enhance security; comply with legal obligations; and respond to comments and questions.`,
+                body: `We use the information we collect to: schedule and fulfill service bookings; communicate with you about your appointments and our services; send promotional communications (if you have opted in); improve our website and service offerings; analyze usage patterns and trends; prevent fraud and enhance security; comply with legal obligations; and respond to comments and questions.`,
               },
               {
                 id: 'cookies',
@@ -47,12 +47,12 @@ export default function PrivacyPolicyPage() {
               {
                 id: 'sharing',
                 title: '4. Information Sharing and Third Parties',
-                body: `We do not sell your personal information. We share information with third-party service providers who perform services on our behalf, including: payment processors (Stripe), shipping carriers, email marketing platforms, and analytics providers. These providers are contractually required to protect your information and use it only to perform the services we request. We may also disclose information if required by law or to protect the rights and safety of Aioneo, our customers, or others.`,
+                body: `We do not sell your personal information. We share information with third-party service providers who perform services on our behalf, including: payment processors (Stripe), email marketing platforms, and analytics providers. These providers are contractually required to protect your information and use it only to perform the services we request. We may also disclose information if required by law or to protect the rights and safety of Aioneo, our customers, or others.`,
               },
               {
                 id: 'retention',
                 title: '5. Data Retention',
-                body: `We retain your personal information for as long as necessary to fulfill the purposes described in this policy, unless a longer retention period is required by law. Order records are retained for 7 years for legal and accounting purposes. Marketing data is retained until you unsubscribe or request deletion.`,
+                body: `We retain your personal information for as long as necessary to fulfill the purposes described in this policy, unless a longer retention period is required by law. Service and booking records are retained for 7 years for legal and accounting purposes. Marketing data is retained until you unsubscribe or request deletion.`,
               },
               {
                 id: 'rights',

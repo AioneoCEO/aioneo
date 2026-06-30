@@ -5,12 +5,9 @@ import Link from 'next/link'
 import { Mail, Phone, Clock, CheckCircle } from 'lucide-react'
 
 const SUBJECTS = [
-  'Order Question',
-  'Product Question',
-  'Returns & Exchanges',
-  'Shipping Issue',
-  'Wholesale / Business Inquiry',
-  'Press Inquiry',
+  'Book a Service',
+  'Service Question',
+  'Quote Request',
   'General Feedback',
   'Other',
 ]
@@ -188,8 +185,7 @@ export default function ContactPage() {
                 <h3 className="text-sm font-semibold text-[#2C2C2C] mb-3">Quick Answers</h3>
                 <ul className="space-y-2">
                   {[
-                    { label: 'Shipping information', href: '/shipping-policy' },
-                    { label: 'Returns & exchanges', href: '/returns' },
+                    { label: 'Our services', href: '/reclaimed-auto-care' },
                     { label: 'Frequently asked questions', href: '/faq' },
                   ].map((link) => (
                     <li key={link.href}>
