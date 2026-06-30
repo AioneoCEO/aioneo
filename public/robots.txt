@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private paths
+Disallow: /api/
+Disallow: /account/
+Disallow: /cart/
+Disallow: /_next/
+
+# Allow crawlers access to static assets
+Allow: /_next/static/
+
+Sitemap: https://aioneo.com/sitemap.xml

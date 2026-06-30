@@ -1,65 +1,103 @@
-import Image from "next/image";
+import type { Metadata } from 'next'
+import HeroSection from '@/components/sections/HeroSection'
+import FeaturedCategories from '@/components/sections/FeaturedCategories'
+import TrustSignals from '@/components/sections/TrustSignals'
+import BrandStory from '@/components/sections/BrandStory'
+import TestimonialSection from '@/components/sections/TestimonialSection'
+import BlogPreview from '@/components/sections/BlogPreview'
+import NewsletterSignup from '@/components/ui/NewsletterSignup'
+import { PRODUCTS } from '@/lib/products'
+import ProductCard from '@/components/sections/ProductCard'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Aioneo — Restore What Matters',
+  description:
+    'Premium automotive detailing products and lifestyle goods crafted for people who care. Shop Reclaimed Auto Care — professional-grade formulas for enthusiasts.',
+  openGraph: {
+    title: 'Aioneo — Restore What Matters',
+    description: 'Professional-grade car care products for the enthusiast who refuses to settle.',
+    url: 'https://aioneo.com',
+    images: [{ url: '/og-default.jpg', width: 1200, height: 630 }],
+  },
+}
+
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Aioneo',
+  url: 'https://aioneo.com',
+  logo: 'https://aioneo.com/logo.png',
+  description: 'Premium lifestyle products. Home of Reclaimed Auto Care.',
+  sameAs: [
+    'https://instagram.com/aioneo',
+    'https://facebook.com/aioneo',
+    'https://youtube.com/@aioneo',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    email: 'hello@aioneo.com',
+    availableLanguage: 'English',
+  },
+}
+
+const featuredProducts = PRODUCTS.filter((p) => p.isBestSeller).slice(0, 4)
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+
+      <HeroSection
+        headline="Restore What Matters"
+        subheadline="Professional-grade car care products formulated for the enthusiast who refuses to settle. Crafted with precision. Proven in the field."
+        primaryCta={{ label: 'Shop Reclaimed Auto Care', href: '/reclaimed-auto-care' }}
+        secondaryCta={{ label: 'Our Story', href: '/about' }}
+        eyebrow="Introducing Reclaimed Auto Care"
+      />
+
+      <TrustSignals />
+
+      <FeaturedCategories />
+
+      {/* Featured Products */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white" aria-labelledby="featured-products-heading">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-[#2D4A35] text-xs font-semibold tracking-[0.25em] uppercase mb-3">Top Performers</p>
+            <h2 id="featured-products-heading" className="font-serif text-4xl sm:text-5xl text-[#2C2C2C]">
+              Best Sellers
+            </h2>
+            <p className="mt-4 text-[#2C2C2C]/60 max-w-xl mx-auto">
+              The products our customers reach for again and again. Start here if you&apos;re new to Reclaimed Auto Care.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <BrandStory />
+
+      <TestimonialSection />
+
+      <BlogPreview />
+
+      {/* Newsletter */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#2D4A35]" aria-labelledby="newsletter-heading">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 id="newsletter-heading" className="font-serif text-3xl sm:text-4xl text-white mb-3">
+            Join the Aioneo Community
+          </h2>
+          <p className="text-white/60 mb-8 text-sm">
+            Detail guides, product launches, and exclusive offers. We respect your inbox.
           </p>
+          <NewsletterSignup dark />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </section>
+    </>
+  )
 }
